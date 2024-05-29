@@ -11,7 +11,12 @@ app.use(cors());
 connectBD();
 app.use("/api/todo", router);
 
-const port = process.env.PORT;
+
+app.get('/', (req, res) => {
+  res.send('Bienvenue à l\'API Todo');
+});
+
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Le serveur est en écoute sur le port ${port}`);
 });
