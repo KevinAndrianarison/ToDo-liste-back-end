@@ -9,9 +9,9 @@
 //   }
 // };
 import mongoose from "mongoose";
+require("dotenv").config();
 
-const uri =
-  "mongodb+srv://kevinandrianarison25:uFLpJUUPUhznl3KO@todo-list.ofrdjt2.mongodb.net/todos?retryWrites=true&w=majority&appName=ToDo-list";
+const uri = process.env.STRING_URI;
 
 const options = {
   useNewUrlParser: true,

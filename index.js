@@ -1,6 +1,6 @@
 import cors from "cors";
 import express from "express";
-import connectBD from "./Database/db";
+import connectBD from "./DataBase/db";
 import router from "./routes/routes";
 
 const app = express();
@@ -11,7 +11,7 @@ app.use(cors());
 connectBD();
 app.use("/api/todo", router);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`Le serveur est en écoute sur le port ${port}`);
 });
